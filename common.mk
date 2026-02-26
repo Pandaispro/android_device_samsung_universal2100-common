@@ -365,6 +365,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.uwb.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.uwb.xml
 
+PRODUCT_PACKAGES += \
+    libuwb-countrycode.conf \
+    libuwb-nxp.conf \
+    libuwb-uci.conf
+
 # Weaver
 PRODUCT_PACKAGES += \
     android.hardware.weaver@1.0.vendor:64
