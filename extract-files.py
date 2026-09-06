@@ -103,6 +103,9 @@ blob_fixups: blob_fixups_user_type = {
             b'swlan0',
             b'wlan1\x00'
         ),
+    'vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc': blob_fixup()
+        # Drop the stock init permission rules, keep only the service definition
+        .regex_replace(r'(?s)^.*?(?=service sec-sysinput-aidl)', ''),
     'vendor/lib64/libnpuc_backend.so': blob_fixup()
         .add_needed('liblog.so')
         .add_needed('libnpuc_cmdq.so'),
