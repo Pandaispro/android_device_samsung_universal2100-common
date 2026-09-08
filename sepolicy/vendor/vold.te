@@ -2,6 +2,11 @@ allow vold efs_file:dir rw_file_perms;
 
 allow vold sysfs_block_writable:file rw_file_perms;
 
+# vold's coldboot() walk of /sys/block writes "add" to the uevent node of every block
+# device it finds, and those resolve into the UFS host subtree that genfs_contexts
+# labels sysfs_scsi_host.
+allow vold sysfs_scsi_host:file w_file_perms;
+
 # Based on the comment from b/111409607 FITRIM might
 # be needed
 allow vold mnt_vendor_file:dir { open read ioctl };

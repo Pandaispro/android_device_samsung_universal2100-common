@@ -1,1 +1,12 @@
 r_dir_file(hal_health_default, sysfs_battery);
+
+# The health HAL walks /sys/class/power_supply and reads the "type" node of every
+# supply it finds. genfs_contexts now labels the t2s i2c paths (i2c-2 / i2c-3), but
+# the adapter number is allocated dynamically by the i2c core, so it is not
+# guaranteed. Keep this as a fallback so a renumber degrades to a broader read
+# instead of 1000+ denials per boot; drop it once the labels are confirmed with
+#   for f in /sys/class/power_supply/*; do readlink -f $f; done
+allow hal_health_default sysfs:file r_file_perms;
+
+# Reads sys.boot_completed
+get_prop(hal_health_default, boot_status_prop);

@@ -3,5 +3,10 @@ allow hal_power_default fwk_stats_service:service_manager find;
 allow hal_power_default sysfs_battery:dir search;
 allow hal_power_default sysfs_battery_writable:file rw_file_perms;
 
+# The power HAL is a client of android.hardware.thermal.IThermal. Use the macro
+# rather than a bare service_manager find; hal_attribute_service() neverallows
+# anything outside hal_thermal_client from finding hal_thermal_service.
+hal_client_domain(hal_power_default, hal_thermal)
+
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)

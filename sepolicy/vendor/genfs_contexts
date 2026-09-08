@@ -37,6 +37,15 @@ genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_en                    u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_stop_capacity         u:object_r:sysfs_battery_writable:s0
 
+# Battery, t2s. hsi2c_0..hsi2c_3 are all status = "okay" and come first in DT order,
+# so the dynamic adapter numbers (i2c-exynos5.c sets adap.nr = -1) land as
+# hsi2c_2 = 0x10570000 -> i2c-2 and hsi2c_3 = 0x10580000 -> i2c-3.
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-2/2-0057/power_supply/pca9468-charger/type                                        u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-2/2-0066/max77705-charger/power_supply/max77705-charger/type                      u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-2/2-0066/max77705-charger/power_supply/max77705-otg/type                          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-2/2-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type                  u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10580000.hsi2c/i2c-3/3-003b/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
+
 # Chip id
 genfscon sysfs /devices/system/chip-id/revision                                        u:object_r:sysfs_chipid:s0
 
