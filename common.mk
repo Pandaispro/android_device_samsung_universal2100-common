@@ -362,13 +362,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.uwb.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.uwb.xml
+# UWB
 
 PRODUCT_PACKAGES += \
     libuwb-countrycode.conf \
     libuwb-nxp.conf \
-    libuwb-uci.conf
+    libuwb-uci.conf \
+    android.hardware.uwb-service.nxp
+
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.uwb.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.uwb.xml
 
 # Weaver
 PRODUCT_PACKAGES += \
