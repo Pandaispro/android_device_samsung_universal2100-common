@@ -304,3 +304,7 @@ firmware_directories /vendor/firmware/wifi/
 
 # Big Hammer
 /dev/wbrc        0660 bluetooth bluetooth
+
+
+# UWB
+/dev/srxxx    0660 uwb uwb
