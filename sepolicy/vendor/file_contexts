@@ -113,3 +113,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.health-service\.samsung                            u:object_r:hal_lineage_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.epic-service                        u:object_r:hal_vendor_epic_service_default_exec:s0
 /(vendor|system/vendor)/bin/hw/samsung\.hardware\.media\.c2-service                                u:object_r:mediacodec_exec:s0
+
+#UWB
+
+/vendor/bin/hw/android\.hardware\.uwb-service\.nxp    u:object_r:hal_uwb_default_exec:s0

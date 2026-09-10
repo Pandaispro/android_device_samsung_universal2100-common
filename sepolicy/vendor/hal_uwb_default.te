@@ -1,0 +1,6 @@
+# allow it to talk to servicemanager
+binder_use(hal_uwb_default)
+binder_service(hal_uwb_default)
+
+# if the nxp impl talks to a kernel driver/node, add that too, e.g.:
+# allow hal_uwb_default uwb_device:chr_file rw_file_perms;
