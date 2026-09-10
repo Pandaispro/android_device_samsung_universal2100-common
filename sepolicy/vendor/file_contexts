@@ -117,3 +117,5 @@
 #UWB
 
 /vendor/bin/hw/android\.hardware\.uwb-service\.nxp    u:object_r:hal_uwb_default_exec:s0
+
+/dev/srxxx                                                                                         u:object_r:uwb_device:s0
