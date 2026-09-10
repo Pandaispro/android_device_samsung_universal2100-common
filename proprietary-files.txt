@@ -291,6 +291,11 @@ vendor/tee/tui/resolution_common/ID00000100
 vendor/tee/00000000-0000-0000-0000-42494f535542
 vendor/tee/00000000-0000-0000-0000-6d706f667376
 
+# UWB
+vendor/firmware/uwb/libsr100t_dev_fw.bin
+vendor/firmware/uwb/libsr100t_prod_fw.bin
+
+
 ## Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
