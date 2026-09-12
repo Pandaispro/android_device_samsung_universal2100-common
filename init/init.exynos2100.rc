@@ -981,7 +981,7 @@ on late-fs
     swapon_all /vendor/etc/fstab.${ro.hardware}
 
     # mAFPC
-    exec - system system -- /system/bin/mafpc_write
+    exec - system system -- /vendor/bin/mafpc_write
 
 on fs
     start hwservicemanager

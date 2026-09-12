@@ -119,4 +119,4 @@
 /vendor/bin/hw/android\.hardware\.uwb-service\.nxp    u:object_r:hal_uwb_default_exec:s0
 
 /dev/srxxx                                                                                         u:object_r:uwb_device:s0
-/system/bin/mafpc_write                                                                                u:object_r:mafpc_write_exec:s0
+/vendor/bin/mafpc_write                                                                                u:object_r:mafpc_write_exec:s0
