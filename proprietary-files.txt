@@ -295,6 +295,14 @@ vendor/tee/00000000-0000-0000-0000-6d706f667376
 vendor/firmware/uwb/libsr100t_dev_fw.bin
 vendor/firmware/uwb/libsr100t_prod_fw.bin
 
+# Vibrator
+
+vendor/firmware/cs40l25a.wmfw
+vendor/firmware/cs40l25a_cal.wmfw
+vendor/firmware/cs40l25a_clab.wmfw
+vendor/firmware/cs40l25a_exc.bin
+vendor/firmware/cs40l25a_clab.bin
+vendor/firmware/cs40l25a_f0.bin
 
 ## Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
