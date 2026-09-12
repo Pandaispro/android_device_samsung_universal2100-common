@@ -296,7 +296,7 @@ vendor/firmware/uwb/libsr100t_dev_fw.bin
 vendor/firmware/uwb/libsr100t_prod_fw.bin
 
 # Vibrator
-
+vendor/firmware/cs40l20.bin
 vendor/firmware/cs40l25a.wmfw
 vendor/firmware/cs40l25a_cal.wmfw
 vendor/firmware/cs40l25a_clab.wmfw
